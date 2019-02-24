@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>klikfood.id | Layani Kebutuhan Pangan & Makanan Anda Online</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link rel="shortcut icon" href="./images/android-icon-96x96.png" />
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCkFnstZC0FhDTMl465DQs155P0sXwt_Jk",
+    authDomain: "klikfood-web.firebaseapp.com",
+    databaseURL: "https://klikfood-web.firebaseio.com",
+    projectId: "klikfood-web",
+    storageBucket: "klikfood-web.appspot.com",
+    messagingSenderId: "920126761048"
+  };
+  firebase.initializeApp(config);
+</script>
+
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i> (021) 7918 6869</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> info@klikfood.id</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+						</div>
+
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-user"></i> Akun Saya</a></li>
+								<li><a href="#"><i class="fa fa-star"></i> Daftar</a></li>
+								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Support</a></li>
+								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Keranjang Belanja</a></li>
+								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="index.html" class="active">Home</a></li>
+								<li class="dropdown"><a href="#">Kategori<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="shop.html">Daging Sapi</a></li>
+                                        <li><a href="shop.html">Daging Ayam</a></li>
+                                        <li><a href="shop.html">Daging Ikan</a></li>
+                                        <li><a href="shop.html">Daging Kambing</a></li>
+                                        <li><a href="shop.html">Produk Olahan</a></li>	
+                                        <li><a href="shop.html">Lainnya</a></li>	
+										<li><a href="shop.html">All Mix Saos</a></li>
+                                    </ul>								
+                                </li> 								
+								<li><a href="contact-us.html">Layanan Pelanggan</a></li>								
+								<li><a href="contact-us.html">Layanan Mitra</a></li>
+								<li><a href="contact-us.html">Kontak</a></li>
+								<li><a href="blog.html">Blog</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<input type="text" placeholder="Cari Produk"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+	
+	<section id="slider"><!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						</ol>
+						
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="col-sm-6">
+								<img src="images/home/pricing.png"  class="pricing" alt="" />
+									<h1><span>PROMO</span>-DAGING</h1>
+									<h2>Promo daging lokal & impor</h2>
+									<p>Banyak pilihan daging, baik lokal maupun import, dengan kualitas tinggi. </p>
+									<center><a href="#"><button type="button" class="btn btn-default get">Beli Sekarang</button></a></center><br>
+									
+								</div>
+								<div class="col-sm-6">
+								<a href="#"><img src="images/home/girl1.jpg" class="girl img-responsive" alt="" /></a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-sm-6">
+								<img src="images/home/pricing.png"  class="pricing" alt="" />
+									<h1><span>DISKON</span>-DAGING</h1>
+									<h2>50% Diskon kami berikan</h2>
+									<p>Kualitas ayam pilihan, diseleksi dengan ketat, karena kami mengutamakn produk yang bermutu, </p>
+									<center><a href="#"><button type="button" class="btn btn-default get">Beli Sekarang</button></a></center><br>
+								</div>
+								<div class="col-sm-6">
+									<a href="#"><img src="images/home/girl2.jpg" class="girl img-responsive" alt="" /></a>
+								</div>
+							</div>
+							
+							<div class="item">
+								<div class="col-sm-6">
+									<img src="images/home/pricing.png" class="pricing" alt="" />
+									<h1><span>OBRAL</span>-AYAM</h1>
+									<h2>Cuci gudang, obral hanya 1 hari!</h2>
+									<p>Dapatkan ayam berkualitas, dengan seleksi ketat untuk dapatkan produk yang bermutu.</p>
+									<center><a href="#"><button type="button" class="btn btn-default get">Beli Sekarang</button></a></center><br>
+								</div>
+								<div class="col-sm-6">
+									<a href="#"><img src="images/home/girl3.jpg" class="girl img-responsive" alt="" /></a>
+								</div>
+							</div>
+							
+						</div>
+						
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section><!--/slider-->
+	
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						<h2>Kategori</h2>
+						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#daging">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Daging Sapi
+										</a>
+									</h4>
+								</div>
+								<div id="daging" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="#">Daging Rendang </a></li>
+											<li><a href="#">Daging Semur/Rawon/Soto </a></li>
+											<li><a href="#">Daging Iga </a></li>
+											<li><a href="#">Daging Giling </a></li>
+											<li><a href="#">Daging Empal/Gepuk </a></li>
+											<li><a href="#">Daging Shabu/Slice </a></li>
+											<li><a href="#">Daging Teriyaki </a></li>
+											<li><a href="#">Daging Hati </a></li>
+											<li><a href="#">Daging Kikil </a></li>
+											<li><a href="#">Daging Dendeng </a></li>
+											<li><a href="#">Daging Paru </a></li>
+											<li><a href="#">Daging Steak </a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#seafood">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Daging Ayam
+										</a>
+									</h4>
+								</div>
+								<div id="seafood" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="#">Ayam Broiler Karkas </a></li>
+											<li><a href="#">Ayam Dada Boneless </a></li>
+											<li><a href="#">Ayam Kampung Karkas </a></li>
+											<li><a href="#">Ayam Paha Boneless</a></li>
+											<li><a href="#">Chicken Parting </a></li>
+											<li><a href="#">Chicken Wings </a></li>
+											<li><a href="#">Drum Stick</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#olahan">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Ikan
+										</a>
+									</h4>
+								</div>
+								<div id="olahan" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="#">Tuna Loin </a></li>
+											<li><a href="#">Cumi </a></li>
+											<li><a href="#">Dorry Fillet </a></li>
+											<li><a href="#">Ikan Bandeng </a></li>
+											<li><a href="#">Ikan Kakap </a></li>
+											<li><a href="#">Kepiting Soka </a></li>
+											<li><a href="#">Ikan Salmon </a></li>
+											<li><a href="#">Tuna Saku </a></li>
+											<li><a href="#">Udang Vaname </a></li>											
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#snacks">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Daging Kambing
+										</a>
+									</h4>
+								</div>
+								<div id="snacks" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="#">Daging Kambing</a></li>
+											<li><a href="#">Daging Paha Kambing</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#makanan">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Produk Olahan
+										</a>
+									</h4>
+								</div>
+								<div id="makanan" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="#">Bakso </a></li>
+											<li><a href="#">Chicken Nugget </a></li>
+											<li><a href="#">Dimsum </a></li>
+											<li><a href="#">Hampers Corned Beef Original </a></li>
+											<li><a href="#">Otak Otak Goreng </a></li>
+											<li><a href="#">Pempek </a></li>
+											<li><a href="#">Risol Vegetable Chicken </a></li>
+											<li><a href="#">Rolade </a></li>
+											<li><a href="#">Smoked Beef </a></li>
+											<li><a href="#">Somay </a></li>
+											<li><a href="#">Sosis</a></li>
+											<li><a href="#">Ayam Pandan </a></li>
+											<li><a href="#">Neah Yang</a></li>
+											<li><a href="#">Kai Yang </a></li>
+											<li><a href="#">Daging Giling Kulit Tahu</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#roti">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Lainnya
+										</a>
+									</h4>
+								</div>
+								<div id="roti" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="#">Topside </a></li>
+											<li><a href="#">Chucktender </a></li>
+											<li><a href="#">Ballpack </a></li>
+											<li><a href="#">Blade </a></li>
+											<li><a href="#">Knuckle </a></li>
+											<li><a href="#">Sirloin </a></li>
+											<li><a href="#">Cuberoll </a></li>
+											<li><a href="#">Tenderloin </a></li>
+											<li><a href="#">Silverside</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#khas">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											All Mix Saos
+										</a>
+									</h4>
+								</div>
+								<div id="khas" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="#">Dressing Salad </a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div><!--/category-products-->
+					
+						<div class="brands_products"><!--brands_products-->
+							<h2>Merek Produk</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li><a href="#"> <span class="pull-right">(50)</span>Bratwurst</a></li>
+									<li><a href="#"> <span class="pull-right">(56)</span>Frankfurter</a></li>
+								</ul>
+							</div>
+						</div><!--/brands_products-->
+						
+						<div class="price-range"><!--New-Product-->
+							<h2>Produk Baru</h2>
+						<center><p>Produk Terbaru Kami</p>
+						<a href="#"><img src="images/home/shipping.jpg" alt="" /></a>
+						</div><!--/New-Product--></center>
+						<div class="price-range"><!--Pesan-->						
+						<center><p>Catat dan Pesan di KlikFood</p>
+						<a href="#"><img src="images/home/shipping.jpg" alt="" /></a>
+						</div></center><!--/Pesan-->
+										
+					</div>
+				</div> 
+				
+				<div class="col-sm-9 padding-right">
+					<div class="features_items"><!--features_items-->
+						<h2 class="title text-center">Produk Promo</h2>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+										<div class="productinfo text-center">
+											<img src="images/home/product1.jpg" alt="" />
+
+											<h2>Rp 35.000</h2>
+											<p>Makanan Lezat</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+										</div>
+										<div class="product-overlay">
+											<div class="overlay-content">
+											<h2>Makanan</h2>
+										    <p>Dari bahan pilihan berkualitas tinggi.</p>
+											<p>Silahkan mencoba sebelum membeli.</p>
+											<p>Makanan ini sangat Lezat, boleh dicoba!</p>
+											<h2>Rp 35.000</h2>
+												<p>Makanan Lezat</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+										</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Tambahkan ke belanjaanku</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/product2.jpg" alt="" />
+										<h2>Rp 35.000</h2>
+										<p>Makanan enak</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+									    <h2>Makanan</h2>
+										<p>Dari bahan pilihan berkualitas tinggi.</p>										
+										<p>Silahkan mencoba sebelum membeli.</p>
+										<p>Makanan ini sangat Lezat, boleh dicoba!</p>
+											<h2>Rp 35.000</h2>
+											<p>Makanan enak</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+										</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Tambahkan ke belanjaanku</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/product3.jpg" alt="" />
+										<h2>Rp 55.000</h2>
+										<p>Makanan Lezat</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+										<h2>Makanan</h2>
+										<p>Dari bahan pilihan berkualitas tinggi.</p>
+										<p>Silahkan mencoba sebelum membeli.</p>
+										<p>Makanan ini sangat Lezat, boleh dicoba!</p>
+											<h2>Rp 55.000</h2>
+											<p>Makanan Lezat</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+										</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Tambahkan ke belanjaanku</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/product4.jpg" alt="" />
+										<h2>Rp 45.000</h2>
+										<p>Makanan enak</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+										<h2>Makanan</h2>
+										<p>Dari bahan pilihan berkualitas tinggi.</p>
+										<p>Silahkan mencoba sebelum membeli.</p>
+										<p>Makanan ini sangat Lezat, boleh dicoba!</p>
+											<h2>Rp 45.000</h2>
+											<p>Makanan enak</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+										</div>
+									</div>
+									<img src="images/home/new.png" class="new" alt="" />
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Tambahkan ke belanjaanku</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/product5.jpg" alt="" />
+										<h2>Rp 25.000</h2>
+										<p>Makanan Lezat</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+										<h2>Makanan</h2>
+										<p>Dari bahan pilihan berkualitas tinggi.</p>										
+										<p>Silahkan mencoba sebelum membeli.</p>
+										<p>Makanan ini sangat Lezat, boleh dicoba!</p>
+											<h2>Rp 25.000</h2>
+											<p>Makanan Lezat</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+										</div>
+									</div>
+									<img src="images/home/sale.png" class="new" alt="" />
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Tambahkan ke belanjaanku</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="images/home/product6.jpg" alt="" />
+										<h2>Rp 75.000</h2>
+										<p>Makanan Lezat</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>Makanan</h2>
+										    <p>Dari bahan pilihan berkualitas tinggi.</p>
+											<p>Silahkan mencoba sebelum membeli.</p>
+											<p>Makanan ini sangat Lezat, boleh dicoba!</p>
+											<h2>Rp 75.000</h2>
+											<p>Makanan Lezat</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+										</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Tambahkan ke belanjaanku</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+					</div><!--features_items-->
+				
+					<div class="category-tab"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#olahan" data-toggle="tab">Daging Sapi</a></li>
+								<li><a href="#pangan" data-toggle="tab">Daging Ayam</a></li>
+								<li><a href="#siapsaji" data-toggle="tab">Daging Kambing</a></li>
+								<li><a href="#snacks" data-toggle="tab">Produk Olahan</a></li>
+								<li><a href="#siapolah" data-toggle="tab">Ikan Laut</li>
+							</ul>
+						</div>
+<!--category-tab--#1-->							
+						<div class="tab-content">
+							<div class="tab-pane fade active in" id="olahan" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery1.jpg" alt="" /></a>											
+												<h2>Rp 30.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery2.jpg" alt="" /></a>
+												<h2>Rp 45.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery3.jpg" alt="" /></a>
+												<h2>Rp 65.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery4.jpg" alt="" /></a>
+												<h2>Rp 75.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+<!--/End-category-tab--#1-->
+							<div class="tab-pane fade" id="pangan" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><<img src="images/home/gallery4.jpg" alt="" /></a>				
+												<h2>Rp 55.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery3.jpg" alt="" /></a>
+												<h2>Rp 25.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery2.jpg" alt="" /></a>
+												<h2>Rp 35.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery1.jpg" alt="" /></a>
+												<h2>Rp 10.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tab-pane fade" id="siapsaji" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery3.jpg" alt="" /></a>
+												<h2>Rp 45.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery4.jpg" alt="" /></a>
+												<h2>Rp 25.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery1.jpg" alt="" /></a>
+												<h2>Rp 65.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery2.jpg" alt="" /></a>
+												<h2>Rp 23.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tab-pane fade" id="snacks" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery1.jpg" alt="" /></a>
+												<h2>Rp 35.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery2.jpg" alt="" /></a>
+												<h2>Rp 25.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery3.jpg" alt="" /></a>	
+												<h2>Rp 50.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery4.jpg" alt="" /></a>
+												<h2>Rp 23.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tab-pane fade" id="siapolah" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery2.jpg" alt="" /></a>
+												<h2>Rp 20.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery4.jpg" alt="" /></a>
+												<h2>Rp 75.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery3.jpg" alt="" /></a>
+												<h2>Rp 25.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+											<a href="#"><img src="images/home/gallery1.jpg" alt="" /></a>
+												<h2>Rp 35.000</h2>
+												<p>Makanan enak</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!--/category-tab-->
+					
+					<div class="recommended_items"><!--recommended_items-->
+						<h2 class="title text-center">Rekomendasi Produk</h2>
+						
+						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="item active">	
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<a href="#"><img src="images/home/recommend1.jpg" alt="" /></a>											
+													<h2>Rp 10.000</h2>
+													<p>Jajanan Enak</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<a href="#"><img src="images/home/recommend2.jpg" alt="" /></a>									
+													<h2>Rp 15.000</h2>
+													<p>Kue enak</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">	
+													<a href="#"><img src="images/home/recommend3.jpg" alt="" /></a>	
+													<h2>Rp 15.000</h2>
+													<p>Jajanan Spesial</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">	
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<a href="#"><img src="images/home/recommend1.jpg" alt="" /></a>
+													<h2>Rp 23.000</h2>
+													<p>Kue enak</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+												<a href="#"><img src="images/home/recommend2.jpg" alt="" /></a>
+													<h2>Rp 10.000</h2>
+													<p>Jajanan huenak</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+												<a href="#"><img src="images/home/recommend3.jpg" alt="" /></a>
+													<h2>Rp 13.000</h2>
+													<p>Makanan enak</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Beli</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+								<i class="fa fa-angle-left"></i>
+							  </a>
+							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+								<i class="fa fa-angle-right"></i>
+							  </a>			
+						</div>
+					</div><!--/recommended_items-->
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+<!--Mitra_Section--#1-->
+		<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 class="title text-center">AYO SEGERA BERGABUNG</h2>	
+						<h1 class="title text-center">JADILAH BAGIAN DARI </br>SOCIOPRENEUR INDONESIA</h1>							
+						<center><p>Indonesia merupakan pasar besar yang belum sepenuhnya digarap oleh para pelaku bisnis, peluang masih terbuka sangat lebar.</p> 
+						<p><b>Ecommerce Technology Platform</b> yang kami kembangkan ini, memberikan Anda kesempatan dan peluang berbisnis di era Teknologi Informasi.</p> 
+						<p>Segera ambil keputusan untuk menjadi <b>Sosial Entrepreneur Baru</b> dengan <b>Platform Teknologi Perdagangan Digital</b> yang mendukung sepenuhnya bisnis Anda.</p> <p><b>APA AJA ITU?  &nbspMAU TAHU?</b></p>
+						<p><b>Ayo Daftar Gratis!</b> <p>Manfaatkan pilihan berikut ini dan bergabunglah bersama keluarga besar <b><i>klikfood.id</i></b></p>
+						</center><br/>
+					</div>	
+				</div>
+				<div class="row">
+						<div class="col-sm-6">
+						<center>
+						<div class="price-range"><!--Jadi Mitra-->
+							<h3>Jadi MITRA</h3>
+							<center><p>Menjadi mitra kami dengan membuka usaha mandiri. <br><a href="http://localhost/klikfood.id/bemitra.html">Baca keterangan lebih lanjut disini</a></p></center>
+							<a href="http://localhost/klikfood.id/bemitra.html"><img src="images/home/mitra.png" alt="" /></a>
+							<center><a href="http://localhost/klikfood.id/bemitra.html"><button type="button" class="btn btn-default get">JADI MITRA KAMI</button></a></center><br>
+							</div><!--/New-Product--></center>
+						</div>
+					
+						<div class="col-sm-6">
+						<center>
+							<div class="price-range"><!--Jadi Rekan-->
+							<h3>Jadi PEMASOK</h3>
+							<center><p>Anda sudah punya usaha? Ayo maju bareng kami!<br><a href="http://localhost/klikfood.id/besupplier.html">Baca keterangan lebih lanjut disini</a></p></center>
+							<a href="http://localhost/klikfood.id/besupplier.html"><img src="images/home/shake-hands.png" alt="" /></a>
+							<center><a href="http://localhost/klikfood.id/besupplier.html"><button type="button" class="btn btn-default get">JADI PEMASOK</button></a></center><br>
+							</div><!--/New-Product--></center>
+				         </div>		
+				</div>
+		</div><p></p>		
+<!--/End_Mitra_Section--#1-->
+	
+<!--Mitra_Section--#2-->
+		<div class="container">
+				<div class="row">
+					<div class="col-sm-12"><br>
+						<h2 class="title text-center">MISI BESAR KAMI</h2>				
+						<center>Adalah agar usahawan mandiri Indonesia bertambah, lebih berkembang dan maju.</center>
+						<p></p>
+					</div>	
+				</div>
+
+				<div class="row">
+			
+					<div class="col-sm-4">
+						<center>
+						<div class="price-range"><!--Misi #1-->
+							<h3>Sociopreneur</h3>
+						    <center><p>Membangun dan menyebarkan antusiasme serta kepedulian sesama usahawan mandiri di Indonesia.</p></center>
+							<a href="#"><img src="images/home/sociopreneur.png" alt="" /></a>
+						</div><!--/Misi #1-->
+						</center>
+					</div>
+					<div class="col-sm-4">
+						<center>
+						<div class="price-range"><!--Misi #2-->
+							<h3>Kesempatan</h3>
+							<center><p>Membuka kesempatan yang sama pada masyarakat untuk membuka usaha secara mandiri.</p></center>
+							<a href="#"><img src="images/home/kesempatan.png" alt="" /></a>
+						</div><!--/Misi #2-->
+						</center>
+					</div>
+					<div class="col-sm-4">
+						<center>
+						<div class="price-range"><!--Misi #3-->
+							<h3>Dongkrak</h3>
+							<center><p>Mendongkrak merek-merek produk kreatif-inovatif berbasis kearifan lokal nusantara.</p></center>
+							<a href="#"><img src="images/home/dongkrak.png" alt="" /></a>
+						</div><!--/Misi #3-->
+						</center>
+					</div>
+					<p></p>
+				</div>
+							
+								<div class="row">
+			
+					<div class="col-sm-4">
+						<center>
+						<div class="price-range"><!--Misi $4-->
+							<h3>Teknologi</h3>
+						    <center><p>Memberikan kemanfaatan platform teknologi dan aplikasi pada masyarakat luas.</p></center>
+							<a href="#"><img src="images/home/teknologi.png" alt="" /></a>
+						</div><!--/Misi #4-->
+						</center>
+					</div>
+					<div class="col-sm-4">
+						<center>
+						<div class="price-range"><!--Misi #5-->
+							<h3>Distribusi</h3>
+							<center><p>Membuka jalur distribusi dan pemasaran guna memperluas cakupan produk.</p></center>
+							<a href="#"><img src="images/home/distribusi.png" alt="" /></a>
+						</div><!--/Misi #5-->
+						</center>
+					</div>
+					<div class="col-sm-4">
+						<center>
+						<div class="price-range"><!--Misi #6-->
+							<h3>Permodalan</h3>
+							<center><p>Membuka dan memberikan akses keuangan pemodalan usaha.</p></center>
+							<a href="#"><img src="images/home/permodalan.png" alt="" /></a>
+						</div><!--/Misi #6-->
+						</center>
+					</div>
+					<p></p>
+				</div>	
+		</div>		
+	<!--/End_Mitra_Section--#2-->
+	
+		<!--Pilih_Kami_Section--#3-->
+		<div class="container">
+				<div class="row">
+					<div class="col-sm-12"><br></br>
+						<h2 class="title text-center">Mereka yang telah bergabung</h2>				
+						<center>Berikut adalah beberapa testimonial mitra dan rekan bisnis kami</center>
+						<p></p>
+					</div>	
+				</div>
+
+				<div class="row">
+			
+					<div class="col-sm-4">
+						<center>
+						<div class="price-range"><!--Telah-Bergabung #1-->
+							<h3>Mitra</h3>
+						    <center><p>Testimoni Mitra yang telah beraktifitas</p></center>
+							<a href="#"><img src="images/home/mitra1.jpg" alt="" /></a>
+						</div><!--/End-Telah Bergabung #1--></center>
+					</div>
+					<div class="col-sm-4">
+						<center>
+						<div class="price-range"><!--Telah-Bergabung #2-->
+							<h3>Mitra</h3>
+							<center><p>Baru bergabung menjadi keluarga besar kami</p></center>
+							<a href="#"><img src="images/home/mitra2.jpg" alt="" /></a>
+						</div><!--/End-Telah Bergabung #2--></center>
+					</div>
+					<div class="col-sm-4">
+						<center>
+						<div class="price-range"><!--Telah-Bergabung #3-->
+							<h3>Rekan</h3>
+							<center><p>Telah bergabung, Rekan Bisnis dari Bogor</p></center>
+							<a href="#"><img src="images/home/rekan1.jpg" alt="" /></a>
+						</div><!--/End-Telah Bergabung #3--></center>
+					</div>
+					<p></p>
+				</div>
+
+		</div>		
+<!--/End_Pilih_Kami_Section--#3-->
+
+<!--Info-Gratis_Section--#4-->
+		<div class="container">
+				<div class="row">
+					<div class="col-sm-12"><br></br>
+						<h2 class="title text-center">Dapatkan info Gratis</h2>				
+						<p></p>
+					</div>	
+				</div>
+
+				<center><div class="row">
+					<div class="col-sm-12">
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Your email address" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>Anda berhak mengikuti sayembara yang kami adakan dengan merekomendasikan link kami.</p>
+							</form>
+					</div>
+					<p></p>
+				</div></center>
+		</div><p></p>		
+<!--/End_Info_Gratis_Section--#4-->
+
+<!--FOOTER-->	
+	<footer id="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">			
+<!--Footer--Start--Company-Info-->				
+					<div class="col-sm-2">
+						<div class="companyinfo">
+							<a href="#"><img src="" alt="" /></a><br>
+							<h2>Klikfood.id</h2>
+							<p>Merupakan portal layanan Pemesanan Makanan dan Bahan Pangan secara online (Order Food & Meals Online), setiap saat melayani kebutuhan pokok pangan Anda dan Keluarga.</p>
+						</div>
+					</div><!--Footer--/End--Company-Info-->
+					<div class="col-sm-7">
+<!--Footer--Start--Technology-Info--Video-->
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe1.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Stack Platform Technology kami.</p>
+							</div>
+						</div><!--Footer--/End--Technology-Info--Video-->
+<!--Footer---Sociopreneur-Info--Video-->
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe2.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Misi Sociopreneur yang kami usung.</p>
+							</div>
+						</div><!--Footer--/End--Sociopreneur-Info--Video-->	
+<!--Footer--Start--Keuntungan-Mitra--Video-->					
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe3.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Keuntungan jadi Mitra KlikFood</p>
+							</div>
+						</div><!--Footer--/End--Keuntungan-Mitra--Video-->
+<!--Footer---Testimonial-Mitra--Video-->						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe4.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Testimonial para Mitra.</p>
+							</div>
+						</div>
+					</div><!--Footer--/End--Testimonial-Mitra--Video-->
+<!--Footer---Map-->
+					<div class="col-sm-3">
+						<div class="address">
+							<a href="#"><img src="images/home/map.png" alt="" /></a>
+							<p>Jl.Loka Indah No.1, Warung Buncit, Jakarta Selatan 12740</p>
+						</div>
+					</div>
+<!--Footer--/End--Map-->
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+<!--Footer--/--Join-Mitra-->					
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>JOIN MITRA</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Daftar Jadi Mitra</a></li>
+								<li><a href="#">Konfirmasi</a></li>
+								<li><a href="#">Dowload Aplikasi</a></li>
+								<li><a href="#">Ikut Sayembara</a></li>
+								<li><a href="#">FAQs</a></li>
+								<li><a href="http://localhost/klikfood.id/login-mitra.html">Login</a></li>
+							</ul>
+						</div>
+					</div><!--Footer--/End--Join-Mitra-->
+<!--Footer--/--Join-Rekan-->
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>JOIN PEMASOK</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Daftar Jadi Pemasok </a></li>
+								<li><a href="#">Konfirmasi</a></li>
+								<li><a href="#">Download Aplikasi</a></li>
+								<li><a href="#">FAQs</a></li>
+								<li><a href="./login-pemasok.html">Login</a></li>
+							</ul>
+						</div>
+					</div><!--Footer--/End--Join-Rekan-->
+<!--Footer--/--Kebijakan-->
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>KEBIJAKAN</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Kebijakan Layanan</a></li>
+								<li><a href="#">Kebijakan Retur Produk</a></li>
+								<li><a href="aturan-sayembara.html">Cara Mengikuti Sayembara</a></li>
+								<li><a href="#">tentang Point</a></li>
+								<li><a href="#">Tentang Rewards</a></li>
+								<li><a href="#">Kebijakan Privacy</a></li>
+								<li><a href="#">Disclaimer</a></li>
+							</ul>
+						</div>
+					</div><!--Footer--/End--Kebijakan-->
+<!--Footer--/--Tentang-Kami-->
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>TENTANG KAMI</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Informasi Perusahaan</a></li>
+								<li><a href="#">Budaya Perusahaan</a></li>
+								<li><a href="#">Visi & Misi</a></li>
+								<li><a href="#">Mitra & Lokasi</a></li>
+								<li><a href="#">Hubungan Investor</a></li>
+								<li><a href="#">Hak Cipta</a></li>
+							</ul>
+						</div>
+					</div><!--Footer--/End--Tentang-Kami-->
+<!--Footer--/--Sayembara-->					
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>Ikut Sayembara?</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Your email address" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>Anda berhak mengikuti sayembara yang kami adakan dengan merekomendasikan link kami.</p>
+							</form>
+						</div>
+					</div><!--Footer--/End--Sayembara-->
+				</div>
+			</div>
+		</div>
+<!--Footer--/--Copyrights-->
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2019 klikfood.id. All rights reserved.</p>
+					<p class="pull-right">Powered By <span><a target="_blank" href="http://www.bap-group.co.id">PT. Distra Boga Sarana</a></span></p>
+				</div>
+			</div>
+		</div><!--Footer--/End--Copyrights-->
+		
+	</footer><!--/END-FOOTER-->
+	
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
